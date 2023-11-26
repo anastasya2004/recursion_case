@@ -17,7 +17,19 @@ print("12 Фрактал Анастасии")
 choice = input("\n")
 
 if choice == "1":
-    print("тут будет код")
+    print(  for _ in range(4):
+    forward(n)
+    left(-90)
+
+    def rec_square(n):
+      if n <= 1:
+        return None
+      square(n)
+      left(-5)
+      return rec_square(0.9*n)
+    
+    rec_square(100)
+    done())
 
 elif choice == "2":
     print("тут будет код")
@@ -29,13 +41,57 @@ elif choice == "4":
     print("тут будет код")
 
 elif choice == "5":
-    print("тут будет код")
+    print(def koch(order, size):
+    if order == 0:          
+        forward(size)
+    else:
+        koch(order-1, size/3)   
+        left(60)
+        koch(order-1, size/3)
+        right(120)
+        koch(order-1, size/3)
+        left(60)
+        koch(order-1, size/3)
+
+    def main():
+        up()
+        goto(-100,0)
+        down()
+        n = int(input('Глубина рекурсии:'))
+        a = int(input('Длина стороны:'))
+        for _ in range(3):
+          koch(n, a)
+          right(120)
+    
+    if __name__ == '__main__':
+        main())
 
 elif choice == "6":
     print("тут будет код")
 
 elif choice == "7":
-    print("тут будет код")
+    print(def ice(order, size):
+    if order == 0:          
+        forward(size)
+    else:
+        ice(order-1, size/2)   
+        left(90)
+        ice(order-1, size/4)
+        right(180)
+        ice(order-1, size/4)
+        left(90)
+        ice(order-1, size/2)
+
+    def main():
+        up()
+        goto(-100,0)
+        down()
+        n = int(input('Глубина рекурсии:'))
+        a = int(input('Длина стороны:'))
+        ice(n, a)
+    
+    if __name__ == '__main__':
+        main())
 
 elif choice == "8":
     print("тут будет код")
@@ -50,4 +106,9 @@ elif choice == "11":
     print("тут будет код")
 
 elif choice == "12":
-    print("тут будет код")
+    print(    if size > 0:
+        circle(size)
+        draw_circle(size-10)
+
+    draw_circle(100)
+    done())
