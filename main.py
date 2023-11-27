@@ -17,17 +17,18 @@ print("12 Фрактал Анастасии")
 choice = input("\n")
 
 if choice == "1":
-    for _ in range(4):
-        forward(n)
-        left(-90)
+    def square(n):
+        for _ in range(4):
+            forward(n)
+            left(-90)
 
     def rec_square(n):
-      if n <= 1:
-        return None
-      square(n)
-      left(-5)
-      return rec_square(0.9*n)
-    
+        if n <= 1:
+            return None
+        square(n)
+        left(-5)
+        return rec_square(0.9*n)
+
     rec_square(100)
     done()
 
@@ -100,14 +101,15 @@ elif choice == "5":
         up()
         goto(-100,0)
         down()
-        n = int(input('Глубина рекурсии:'))
-        a = int(input('Длина стороны:'))
+        n = int(input('Глубина рекурсии: '))
+        a = int(input('Длина стороны: '))
         for _ in range(3):
           koch(n, a)
           right(120)
     
-    if __name__ == '__main__':
-        main()
+    main()
+    done()
+    
 
 elif choice == "6":
     print("тут будет код")
@@ -129,12 +131,12 @@ elif choice == "7":
         up()
         goto(-100,0)
         down()
-        n = int(input('Глубина рекурсии:'))
-        a = int(input('Длина стороны:'))
+        n = int(input('Глубина рекурсии: '))
+        a = int(input('Длина стороны: '))
         ice(n, a)
 
-    if __name__ == '__main__':
-        main()
+    main()
+    done()
 
 elif choice == "8":
     print("тут будет код")
@@ -169,9 +171,31 @@ elif choice == "11":
     print("тут будет код")
 
 elif choice == "12":
-    if size > 0:
-        circle(size)
-        draw_circle(size-10)
+    def snow(order, size):
+        if order == 0:
+            forward(size)
+        else:
+            left(90)
+            snow(order-1, size/3)
+            right(60)
+            snow(order-1, size/3)
+            left(120)
+            snow(order-1, size/3)
+            right(60)
+            snow(order-1, size/3)
+            right(90)
 
-    draw_circle(100)
+    def main():
+        up()
+        goto(0,0)
+        down()
+        n = int(input('Глубина рекурсии: '))
+        a = int(input('Длина стороны: '))
+        for _ in range(8):
+            snow(n, a)
+            right(45)
+
+    main()
     done()
+
+    
