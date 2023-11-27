@@ -59,7 +59,29 @@ elif choice == "3":
     print("тут будет код")
 
 elif choice == "4":
-    print("тут будет код")
+    def koch(n, size):
+        if n == 0:
+            forward(size)
+        else:
+            koch(n - 1, size / 3)
+            left(60)
+            koch(n - 1, size / 3)
+            right(120)
+            koch(n - 1, size / 3)
+            left(60)
+            koch(n - 1, size / 3)
+
+    def main():
+        up()
+        goto(-100, 0)
+        down()
+        koch(n, size)
+
+    n = int(input("Введите глубину рекурсии: "))
+    size = int(input("Введите длину стороны: "))
+
+    main()
+    mainloop()
 
 elif choice == "5":
     def koch(order, size):
