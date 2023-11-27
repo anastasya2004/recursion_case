@@ -140,7 +140,27 @@ elif choice == "8":
     print("тут будет код")
 
 elif choice == "9":
-    print("тут будет код")
+    def levi(n, size):
+        if n == 0:
+            forward(size)
+        else:
+            left(45)
+            levi(n - 1, size / 2)
+            right(90)
+            levi(n - 1, size / 2)
+            left(45)
+
+    def main():
+        up()
+        goto(-100, 0)
+        down()
+        levi(n, size)
+
+    n = int(input("Введите глубину рекурсии: "))
+    size = int(input("Введите размер стороны: "))
+
+    main()
+    mainloop()
 
 elif choice == "10":
     print("тут будет код")
