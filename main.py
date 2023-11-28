@@ -112,7 +112,34 @@ elif choice == "5":
     
 
 elif choice == "6":
-    print("тут будет код")
+    def mino_curve(order, size):
+    if order == 0:
+        turtle.forward(size)
+    else:
+        mino_curve(order-1, size/4)
+        turtle.left(90)
+        mino_curve(order-1, size/4)
+        turtle.right(90)
+        mino_curve(order-1, size/4)
+        turtle.right(90)
+        mino_curve(order-1, size/4)
+        mino_curve(order-1, size/4)
+        turtle.left(90)
+        mino_curve(order-1, size/4)
+        turtle.left(90)
+        mino_curve(order-1, size/4)
+        turtle.right(90)
+        mino_curve(order-1, size/4)
+
+turtle.speed(0)
+turtle.up()
+turtle.goto(-150, 0)
+turtle.down()
+
+mino_curve(3, 300)
+
+turtle.done()
+
 
 elif choice == "7":
     def ice(order, size):
