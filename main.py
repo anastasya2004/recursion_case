@@ -59,7 +59,28 @@ elif choice == "2":
     mainloop()
 
 elif choice == "3":
-    print("тут будет код")
+        def draw(l, n):
+            if n == 0:
+                left(180)
+                return
+
+            x = l / (n + 1)
+            for i in range(n):
+                forward(x)
+                left(45)
+                draw(0.5 * x * (n - i - 1), n - i - 1)
+                left(90)
+                draw(0.5 * x * (n - i - 1), n - i - 1)
+                right(135)
+
+            forward(x)
+            left(180)
+            forward(l)
+
+
+        left(90)
+        draw(400, 5)
+    
 
 elif choice == "4":
     def koch(n, size):
