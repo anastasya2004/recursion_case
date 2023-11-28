@@ -26,11 +26,13 @@ if choice == "1":
         if n <= 1:
             return None
         square(n)
-        left(-5)
+        forward(0.1*n)
+        left(-10)
         return rec_square(0.9*n)
 
     rec_square(100)
     done()
+
 
 elif choice == "2":
     def tree(height, size, corner):
