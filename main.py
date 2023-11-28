@@ -218,7 +218,21 @@ elif choice == "10":
     print("тут будет код")
 
 elif choice == "11":
-    print("тут будет код")
+    def draw_flower(x, y, size, depth):
+        if depth > 0:
+            turtle.up()
+            turtle.goto(x, y - size)
+            turtle.down()
+            turtle.circle(size)
+            draw_flower(x - size, y, size/2, depth-1)
+            draw_flower(x + size, y, size/2, depth-1)
+            draw_flower(x, y - size, size/2, depth-1)
+            draw_flower(x, y + size, size/2, depth-1)
+
+    turtle.speed(0)
+    draw_flower(0, 0, 100, 5)
+    turtle.done()
+
 
 elif choice == "12":
     def snow(order, size):
