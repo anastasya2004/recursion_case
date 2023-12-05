@@ -1,3 +1,8 @@
+'''
+
+Alena Kareva 85%
+
+'''
 from turtle import *
 
 print("Привет! Какой фрактал вы хотите посмотреть? Выберите число")
@@ -136,32 +141,32 @@ elif choice == "5":
 
 elif choice == "6":
     def mino_curve(order, size):
-    if order == 0:
-        forward(size)
-    else:
-        mino_curve(order-1, size/4)
-        left(90)
-        mino_curve(order-1, size/4)
-        right(90)
-        mino_curve(order-1, size/4)
-        right(90)
-        mino_curve(order-1, size/4)
-        mino_curve(order-1, size/4)
-        left(90)
-        mino_curve(order-1, size/4)
-        left(90)
-        mino_curve(order-1, size/4)
-        right(90)
-        mino_curve(order-1, size/4)
+        if order == 0:
+            forward(size)
+        else:
+            mino_curve(order-1, size/4)
+            left(90)
+            mino_curve(order-1, size/4)
+            right(90)
+            mino_curve(order-1, size/4)
+            right(90)
+            mino_curve(order-1, size/4)
+            mino_curve(order-1, size/4)
+            left(90)
+            mino_curve(order-1, size/4)
+            left(90)
+            mino_curve(order-1, size/4)
+            right(90)
+            mino_curve(order-1, size/4)
 
-speed(0)
-up()
-goto(-150, 0)
-down()
+    speed(0)
+    up()
+    goto(-150, 0)
+    down()
 
-mino_curve(3, 300)
+    mino_curve(3, 300)
 
-done()
+    done()
 
 
 elif choice == "7":
@@ -215,7 +220,28 @@ elif choice == "9":
     mainloop()
 
 elif choice == "10":
-    print("тут будет код")
+    def balls(n, radius):
+        if n == 0:
+            circle(radius)
+        else:
+            circle(radius)
+            left(45)
+            balls(n - 1, radius * 0.5)
+            right(90)
+            balls(n - 1, radius * 0.5)
+            left(45)
+
+    def main():
+        up()
+        goto(-100, 0)
+        down()
+        balls(n, radius)
+
+    n = int(input("Введите глубину рекурсии: "))
+    radius = int(input("Введите радиус кружка: "))
+
+    main()
+    mainloop()
 
 elif choice == "11":
     def draw_flower(x, y, size, depth):
