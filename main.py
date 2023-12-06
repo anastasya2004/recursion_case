@@ -1,5 +1,5 @@
 '''
-
+Anastasya Osokina 72%
 Alena Kareva 85%
 
 '''
