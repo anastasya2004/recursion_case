@@ -193,8 +193,7 @@ elif choice == "7":
     main()
     done()
 
-elif choice == "8":
-    print("тут будет код")
+
 
 elif choice == "9":
     def levi(n, size):
